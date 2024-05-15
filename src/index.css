@@ -12,11 +12,11 @@
 
 :root {
   --clr-accent: #EB455F;
-  --clr-bg: #181D31;
-  --clr-bg-shade: #010412;
-  --clr-bg-contrast: #2B3A55;
-  --clr-text-main: #FCFFE7;
-  --clr-text-secondary: #FEFCF3;
+  --clr-bg: #FCFFE7;
+  --clr-bg-shade: #c0c7e7;
+  --clr-bg-contrast: #181D31;
+  --clr-text-main: #181D31;
+  --clr-text-secondary: #FFFBE9;
   --clr-touch: #46C2CB;
 }
 
@@ -40,7 +40,6 @@
   --clr-text-secondary: #FFFBE9;
   --clr-touch: #46C2CB;
 }
-
 
 
 body { 

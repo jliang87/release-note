@@ -1,10 +1,12 @@
 import React from "react";
 import style from "./Nav.module.css";
+import { useTheme } from '../../context/Theme.context';
 import { Outlet, useNavigate, NavLink } from "react-router-dom";
 
-function Nav() {
+function Nav(props) {
 
   const navigate  = useNavigate();
+  const themeToggle = useTheme();
 
   const handleClick = () => {
     navigate("/courses");
@@ -27,6 +29,9 @@ function Nav() {
             <h4>Coding Ninjas</h4>
           </div>
           <div className={style.nav_details}>
+            <button onClick={() => themeToggle.toggleTheme()}>
+              {themeToggle.theme === 'dark-theme' ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            </button>
             <button>
               <NavLink to="/courses"> 
                 {({isActive}) => (isActive? "On Courses" : "Courses")}
