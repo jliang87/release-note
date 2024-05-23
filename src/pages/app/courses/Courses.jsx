@@ -9,7 +9,7 @@ function Courses(props) {
     <div className={style.courses_container}>
       <div className={style.heading}>
         <h1>Popular Courses</h1>
-        <h4>Choose your Katana ⚔️</h4>
+        <h4>Choose your Katana</h4>
       </div>
       <div className={style.courses}>
         {coursesData.map((course, index) => {

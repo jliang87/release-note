@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "./Nav.module.css";
 import { useTheme } from '../../context/Theme.context';
-import { Outlet, useNavigate, NavLink } from "react-router-dom";
+import { Outlet, useNavigate, NavLink, useLocation } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 function Nav(props) {
-
   const navigate  = useNavigate();
   const themeToggle = useTheme();
+  const { t, i18n } = useTranslation();
+  const location = useLocation(); 
+
+  const queryParams = new URLSearchParams(location.search);
+  const displayVersion = queryParams.get('displayVersion');
+  const language = queryParams.get('language');
+  const country = queryParams.get('country');
+  const variant = queryParams.get('variant');
 
   const handleClick = () => {
     navigate("/courses");
   }
 
   const handleLogoClick = () => {
-    navigate("/");
+    navigate({pathname: "/" + location.pathname.slice(1).split("/")[0], search: location.search});
   }
 
   return (
@@ -23,18 +31,17 @@ function Nav(props) {
           <div className={style.nav_title_wrapper} onClick={handleLogoClick}>
             <img
               className={style.logo}
-              src="https://files.codingninjas.in/pl-ninja-16706.svg"
+              src="https://zgh.com/wp-content/themes/zgh/public/img/logo.svg"
               alt="logo"
             />
-            <h4>Coding Ninjas</h4>
           </div>
           <div className={style.nav_details}>
             <button onClick={() => themeToggle.toggleTheme()}>
-              {themeToggle.theme === 'dark-theme' ? "Switch to Light Mode" : "Switch to Dark Mode"}
+              {themeToggle.theme === 'dark-theme' ? t(`${language}.lightMode`) : t(`${language}.darkMode`)}
             </button>
             <button>
-              <NavLink to="/courses"> 
-                {({isActive}) => (isActive? "On Courses" : "Courses")}
+              <NavLink to={{pathname: 'content', search: location.search}}> 
+                {({isActive}) => (isActive? t(`${language}.onContent`) : t(`${language}.content`))}
               </NavLink>
             </button>
           </div>
@@ -46,7 +53,6 @@ function Nav(props) {
 }
 
 export default Nav;
-
 //  <img
 //    alt='cart-icon'
 //    src='https://cdn-icons-png.flaticon.com/512/4903/4903482.png'

@@ -11,6 +11,7 @@ nav {
     left: 0;
     z-index: 3;
     box-shadow: 0 0 1rem 0rem var(--clr-bg-contrast);
+    position: fixed;
 }
 
 .nav_container {
@@ -29,7 +30,7 @@ nav {
 }
 
 .logo {
-    width: 2rem;
+    width: 8rem;
     aspect-ratio: 1/1;
     margin-right: 2vw;
 }
@@ -44,6 +45,7 @@ nav {
 
 
 .nav_details button {
+    width: max-content;
     cursor: pointer;
     margin: 1rem;
     padding: 0.3rem 0.5rem;

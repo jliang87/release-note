@@ -16,7 +16,9 @@ const ThemeProvider = ({ children }) => {
       const newTheme = theme === 'light-theme' ? 'dark-theme' : 'light-theme';
       const isDark = newTheme === 'light-theme' ? 'false' : 'true';
 
-      window.history.pushState({}, '', `?darkMode=${isDark}`);
+      const queryParams = new URLSearchParams(location.search);
+      queryParams.delete("darkMode");
+      window.history.pushState({}, '', `?${queryParams}&darkMode=${isDark}`);
       setTheme(newTheme);
     }
   };
