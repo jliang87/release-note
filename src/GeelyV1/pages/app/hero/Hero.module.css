@@ -8,7 +8,7 @@ header {
     background-color: var(--clr-bg-contrast);
 }
 
-.logo_wrapper {
+.image_wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,12 +17,9 @@ header {
     clip-path: polygon(0 0, 100% 0, 71% 100%, 0 100%);
 }
 
-.logo {
-    width: 260% !important;
+.image {
+    width: 260%;
     object-fit: cover;
-/*    aspect-ratio: 1/1;*/
-/*    margin-right: 2vw;*/
-/*    animation: attack 4s ease-in-out alternate infinite;*/
 }
 
 .content {
@@ -55,7 +52,6 @@ header {
     font-family: 'Roboto', sans-serif;
 }
 
-
 @media screen and (max-width: 768px) {
     header {
         height: 100vh;
@@ -65,14 +61,13 @@ header {
         flex-direction: column;
     }
 
-    .logo_wrapper {
+    .image_wrapper {
         clip-path: none;
         flex : 1
     }
 
-    .logo {
-       
-        width: 10rem;
+    .image {
+        overflow: auto;
     }
 
     .content {
@@ -89,19 +84,5 @@ header {
 
     .content p {
         font-size: 1.2rem;
-    }
-}
-
-@keyframes attack {
-    0% {
-        transform: rotate(-10deg) skew(-10deg)
-    }
-
-    50% {
-        transform: rotate(10deg) skew(10deg)
-    }
-
-    100% {
-        transform: rotate(-10deg) skew(-10deg)
     }
 }

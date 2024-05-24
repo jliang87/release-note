@@ -19,11 +19,11 @@ function Hero() {
 
   return (
     <header>
-      <section className={style.logo_wrapper}>
+      <section className={style.image_wrapper}>
         <img
-          className={style.logo}
+          className={style.image}
           src='/kv.pc1.jpg'
-          alt='logo'
+          alt='image'
         />
       </section>
       <section className={style.content}>
