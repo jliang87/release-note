@@ -1,9 +1,9 @@
 {
-  "en": {
+  "us.en": {
     "lightMode": "Light Mode",
     "darkMode": "Dark Mode"
   },
-  "zh": {
+  "cn.zh": {
     "lightMode": "日间模式",
     "darkMode": "夜间模式",
     "content": "日志目录",

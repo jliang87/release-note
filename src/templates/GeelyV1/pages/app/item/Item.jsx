@@ -20,7 +20,7 @@ function Item() {
             {content.chapters.map((chapter) => {
               return <div className={style.chapterId}><Link 
                 to={{pathname: chapter.chapter, search: routeInfo.queryString}}>
-                  {t(`${routeInfo.language}.${chapter.title}`, {ns: routeInfo.displayVersion})}</Link></div>
+                  {t(`${routeInfo.i18nKey}.${chapter.title}`, {ns: routeInfo.displayVersion})}</Link></div>
             })}
           </ul>
         </div>

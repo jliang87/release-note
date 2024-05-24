@@ -20,9 +20,9 @@ function Hero() {
         />
       </section>
       <section className={style.content}>
-        <h4>{t(`${routeInfo.language}.subtitle`, {ns: routeInfo.displayVersion, version: routeInfo.realDisplayVersion})}</h4>
-        <h1>{t(`${routeInfo.language}.title`, {ns: routeInfo.displayVersion})}</h1>
-        <p>{t(`${routeInfo.language}.description`, {ns: routeInfo.displayVersion})}</p>
+        <h4>{t(`${routeInfo.i18nKey}.subtitle`, {ns: routeInfo.displayVersion, version: routeInfo.realDisplayVersion})}</h4>
+        <h1>{t(`${routeInfo.i18nKey}.title`, {ns: routeInfo.displayVersion})}</h1>
+        <p>{t(`${routeInfo.i18nKey}.description`, {ns: routeInfo.displayVersion})}</p>
       </section>
     </header>
   );

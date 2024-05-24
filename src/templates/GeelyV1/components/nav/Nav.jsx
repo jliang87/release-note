@@ -34,11 +34,11 @@ function Nav(props) {
                 src='https://cdn-icons-png.flaticon.com/512/4903/4903482.png'
                 className={`${style.cart_icon} ${style.icon} `}
               />*/}
-              {themeToggle.theme === 'dark-theme' ? t(`${routeInfo.language}.lightMode`) : t(`${routeInfo.language}.darkMode`)}
+              {themeToggle.theme === 'dark-theme' ? t(`${routeInfo.i18nKey}.lightMode`) : t(`${routeInfo.i18nKey}.darkMode`)}
             </button>
               <NavLink to={{pathname: 'content', search: routeInfo.queryString}}> 
-                {({isActive}) => (isActive ? <button>{t(`${routeInfo.language}.onContent`)}</button> 
-                  : <button>{t(`${routeInfo.language}.content`)}</button>)}
+                {({isActive}) => (isActive ? <button>{t(`${routeInfo.i18nKey}.onContent`)}</button> 
+                  : <button>{t(`${routeInfo.i18nKey}.content`)}</button>)}
               </NavLink>
           </div>
         </div>

@@ -15,9 +15,9 @@ function Chapter() {
 
   return (
     <div className={style.items} >
-      <h1>{t(`${routeInfo.language}.${chapter.title}`, {ns: routeInfo.displayVersion})}</h1>
-      <h2>{t(`${routeInfo.language}.${chapter.description}`, {ns: routeInfo.displayVersion})}</h2>
-      <p className={styles.para}>{t(`${routeInfo.language}.${chapter.details}`, {ns: routeInfo.displayVersion})}</p>
+      <h1>{t(`${routeInfo.i18nKey}.${chapter.title}`, {ns: routeInfo.displayVersion})}</h1>
+      <h2>{t(`${routeInfo.i18nKey}.${chapter.description}`, {ns: routeInfo.displayVersion})}</h2>
+      <p className={styles.para}>{t(`${routeInfo.i18nKey}.${chapter.details}`, {ns: routeInfo.displayVersion})}</p>
       <br />
       <div className={styles.videos}>
         <iframe

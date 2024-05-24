@@ -13,7 +13,7 @@ function Content(props) {
   return (
     <div className={style.content_container}>
       <div className={style.heading}>
-        <h4>{t(`${routeInfo.language}.contentTitle`, {ns: routeInfo.displayVersion, version: routeInfo.realDisplayVersion})}</h4>
+        <h4>{t(`${routeInfo.i18nKey}.contentTitle`, {ns: routeInfo.displayVersion, version: routeInfo.realDisplayVersion})}</h4>
       </div>
       <div className={style.content}>
         {contentData.map((content, index) => {
@@ -23,7 +23,7 @@ function Content(props) {
                 <Card
                   key={content.id}
                   id={content.id}
-                  title={t(`${routeInfo.language}.${content.title}`, {ns: routeInfo.displayVersion})}
+                  title={t(`${routeInfo.i18nKey}.${content.title}`, {ns: routeInfo.displayVersion})}
                   img={content.img}
                 />
               </Link>

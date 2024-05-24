@@ -14,10 +14,11 @@ const RouteInfoProvider = (props) => {
   const realDisplayVersion = displayVersion.replace(/_/g, " ").replace(/-/g, ".");
   const queryString = location.search;
   const pathname = location.pathname;
+  const i18nKey = variant == null ? `${country}.${language}` : `${country}.${language}.${variant}`
 
   return (
     <RouteInfoContext.Provider value={{ queryObject, queryString, displayVersion, 
-      language, country, variant, realDisplayVersion, pathname }}>
+      language, country, variant, realDisplayVersion, pathname, i18nKey }}>
       {props.children}
     </RouteInfoContext.Provider>
   );
