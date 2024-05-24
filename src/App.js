@@ -1,18 +1,20 @@
-import BlankTemplate from "./BlankTemplate/BlankTemplate";
-import Hero from "./GeelyV1/pages/app/hero/Hero";
-import Nav from "./GeelyV1/components/nav/Nav";
-import Content from "./GeelyV1/pages/app/content/Content";
-import Item from "./GeelyV1/pages/app/item/Item";
-import Chapter from "./GeelyV1/pages/app/chapter/Chapter";
-
-import { ThemeProvider } from './Theme.context';
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect } from 'react';
 import {BrowserRouter as browserRouter, RouterProvider, createBrowserRouter} from 'react-router-dom';
+
+import BlankTemplate from "./templates/BlankTemplate/BlankTemplate";
+import Hero from "./templates/GeelyV1/pages/app/hero/Hero";
+import Nav from "./templates/GeelyV1/components/nav/Nav";
+import Content from "./templates/GeelyV1/pages/app/content/Content";
+import Item from "./templates/GeelyV1/pages/app/item/Item";
+import Chapter from "./templates/GeelyV1/pages/app/chapter/Chapter";
+
+import { ThemeProvider } from './providers/theme';
+import { RouteInfoProvider } from './providers/routeInfo';
 import i18next from './i18n';
 
 function App() {
   const BrowserRouter = createBrowserRouter([
-    {path: "/GeelyV1", element: <ThemeProvider templateClass="GeelyV1"><Nav /></ThemeProvider>, children: [
+    {path: "/GeelyV1", element: <ThemeProvider templateClass="GeelyV1"><RouteInfoProvider><Nav /></RouteInfoProvider></ThemeProvider>, children: [
       {path: "/GeelyV1", element: <Hero />},
       {path: "/GeelyV1/content", children: [
         {index: true, element: <Content />},
@@ -21,7 +23,7 @@ function App() {
         ]}
       ]},
     ]},
-    {path: "/common", element: <BlankTemplate />},
+    {path: "/common", element: <RouteInfoProvider><BlankTemplate /></RouteInfoProvider>},
   ])
 
   return (

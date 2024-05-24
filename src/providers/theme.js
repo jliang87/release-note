@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import usePrevious from "./hooks/usePrevious";
+import usePrevious from "../hooks/usePrevious";
 
 const ThemeContext = createContext();
 

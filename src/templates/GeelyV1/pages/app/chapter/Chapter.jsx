@@ -1,19 +1,13 @@
 import React from "react";
 import styles from "./Chapter.module.css";
 import style from "../item/Item.module.css";
-import { useParams,  useOutletContext, Link, useLocation } from "react-router-dom";
+import { useParams,  useOutletContext, Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
+import { useRouteInfo } from '../../../../../providers/routeInfo';
 
 function Chapter() {
   const { t, i18n } = useTranslation();
-  const location = useLocation(); 
-
-  const queryParams = new URLSearchParams(location.search);
-  const displayVersion = queryParams.get('displayVersion');
-  const language = queryParams.get('language');
-  const country = queryParams.get('country');
-  const variant = queryParams.get('variant');
-  const realDisplayVersion = displayVersion.replace(/_/g, " ").replace(/-/g, ".");
+  const routeInfo = useRouteInfo(); 
 
   const {chapterId} = useParams();
   const item = useOutletContext();
@@ -21,9 +15,9 @@ function Chapter() {
 
   return (
     <div className={style.items} >
-      <h1>{t(`${language}.${chapter.title}`, {ns: displayVersion})}</h1>
-      <h2>{t(`${language}.${chapter.description}`, {ns: displayVersion})}</h2>
-      <p className={styles.para}>{t(`${language}.${chapter.details}`, {ns: displayVersion})}</p>
+      <h1>{t(`${routeInfo.language}.${chapter.title}`, {ns: routeInfo.displayVersion})}</h1>
+      <h2>{t(`${routeInfo.language}.${chapter.description}`, {ns: routeInfo.displayVersion})}</h2>
+      <p className={styles.para}>{t(`${routeInfo.language}.${chapter.details}`, {ns: routeInfo.displayVersion})}</p>
       <br />
       <div className={styles.videos}>
         <iframe
