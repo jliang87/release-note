@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Hero.module.css';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from "react-router-dom";
-import useBodyClass from "../../../hooks/useBodyClass";
+import useBodyClass from "../../../../hooks/useBodyClass";
 
 function Hero() {
   const { t, i18n } = useTranslation();

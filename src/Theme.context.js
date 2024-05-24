@@ -1,12 +1,11 @@
 import { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import usePrevious from "../hooks/usePrevious";
+import usePrevious from "./hooks/usePrevious";
 
 const ThemeContext = createContext();
 
-const ThemeProvider = ({ children }) => {
-  //IMPORTANT!!!
-  document.documentElement.classList.add("GeelyV1");
+const ThemeProvider = (props) => {
+  document.documentElement.classList.add(props.templateClass);
 
   const [theme, setTheme] = useState();
   const previousTheme = usePrevious(theme);
@@ -46,7 +45,7 @@ const ThemeProvider = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
+      {props.children}
     </ThemeContext.Provider>
   );
 };
