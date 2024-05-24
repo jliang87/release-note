@@ -3,7 +3,9 @@ import Nav from "./GeelyV1/components/nav/Nav";
 import Content from "./GeelyV1/pages/app/content/Content";
 import Item from "./GeelyV1/pages/app/item/Item";
 import Chapter from "./GeelyV1/pages/app/chapter/Chapter";
-import { ThemeProvider } from './GeelyV1/context/Theme.context';
+import BlankTemplate from "./BlankTemplate/BlankTemplate";
+import { ThemeProvider } from './GeelyV1/contexts/Theme.context';
+
 import React, { useState, useEffect, Suspense } from 'react';
 import {BrowserRouter as browserRouter, RouterProvider, createBrowserRouter} from 'react-router-dom';
 import i18next from './i18n';
@@ -18,9 +20,10 @@ function App() {
           {path: ":chapterId", element: <Chapter />}
         ]}
       ]},
-    ]}
+    ]},
+    {path: "/", element: <BlankTemplate />},
   ])
-  
+
   return (
     <div className="App">
       <RouterProvider router={BrowserRouter} />

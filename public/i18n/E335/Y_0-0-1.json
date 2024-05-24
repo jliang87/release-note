@@ -1,0 +1,12 @@
+{
+  "zh": {
+    "subtitle": "滚辣出炉 OTA 版本{{version}}",
+    "title": "准备享受最新驾驶体验",
+    "description": "更新包括可编辑灯光秀、自动泊车优化、新调校驾驶模式等"
+  },
+  "en": {
+    "subtitle": "滚辣出炉 OTA V{{version}}",
+    "title": "准备享受最新驾驶体验",
+    "description": "更新包括可编辑灯光秀、自动泊车优化、新调校驾驶模式等"
+  }
+}

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import style from "./Nav.module.css";
-import { useTheme } from '../../context/Theme.context';
+import { useTheme } from '../../contexts/Theme.context';
 import { Outlet, useNavigate, NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
+import "../../index.css";
 
 function Nav(props) {
   const navigate  = useNavigate();

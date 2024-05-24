@@ -1,9 +1,13 @@
 import { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
+import usePrevious from "../hooks/usePrevious";
 
 const ThemeContext = createContext();
 
 const ThemeProvider = ({ children }) => {
+  //IMPORTANT!!!
+  document.documentElement.classList.add("GeelyV1");
+
   const [theme, setTheme] = useState();
   const previousTheme = usePrevious(theme);
   const location = useLocation();
@@ -23,27 +27,19 @@ const ThemeProvider = ({ children }) => {
     }
   };
 
-  function usePrevious(theme) {
-    const ref = useRef();
-    useEffect(() => {
-      ref.current = theme;
-    },[theme]);
-    return ref.current;
-  }
-
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
     const themeParam = queryParams.get('darkMode');
 
     if ((previousTheme === undefined && theme === 'dark-theme') || (theme === undefined && themeParam && themeParam === "true") ||
         (previousTheme === "light-theme" && theme === "dark-theme")) {
-      document.documentElement.classList.remove('light-theme');
-      document.documentElement.classList.add('dark-theme');
+      document.body.classList.remove('light-theme');
+      document.body.classList.add('dark-theme');
       setTheme('dark-theme');
     } else if ((theme === undefined && themeParam && themeParam === "false") ||
-               (previousTheme === "dark-theme" && theme === "light-theme")) {
-      document.documentElement.classList.remove('dark-theme');
-      document.documentElement.classList.add('light-theme');
+        (previousTheme === "dark-theme" && theme === "light-theme")) {
+      document.body.classList.remove('dark-theme');
+      document.body.classList.add('light-theme');
       setTheme('light-theme'); 
     }
   }, [theme]);

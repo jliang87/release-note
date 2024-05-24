@@ -13,7 +13,6 @@ header {
     align-items: center;
     justify-content: center;
     flex: 1.2;
-    background-color: var(--clr-bg);
     margin: 0px;
     clip-path: polygon(0 0, 100% 0, 71% 100%, 0 100%);
 }

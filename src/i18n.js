@@ -9,7 +9,7 @@ i18next
   .use(initReactI18next)
   .init({
     debug: true,
-    ns: ['common','1-0-0'],
+    ns: ['common', '1-0-0', 'Y_0-0-1'],
     defaultNs: 'common',
     detection: {
       order: ['querystring'],
