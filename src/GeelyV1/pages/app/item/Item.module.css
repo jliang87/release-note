@@ -1,0 +1,48 @@
+.item_container {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-block: 8vh;
+  background-color: var(--clr-bg);
+}
+
+.heading {
+  display: flex;
+}
+
+.chapter_box {
+  display: flex;
+  color: var(--clr-text-main);
+  padding: 1rem;
+}
+
+.chapters {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: var(--clr-text-main);
+}
+
+.chapter_box a {
+  text-decoration: none;
+  color: var(--clr-text-main);
+}
+
+.chapter_box a:hover {
+/*  color: var(--clr-accent);*/
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 70vw;
+  color: var(--clr-text-main);
+}
+
+.chapterId {
+  font-size: 1.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}

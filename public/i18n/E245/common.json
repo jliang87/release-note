@@ -4,9 +4,9 @@
     "darkMode": "Dark Mode"
   },
   "zh": {
-    "lightMode": "日间",
-    "darkMode": "夜间",
-    "content": "目录",
-    "onContent": "目录下"
+    "lightMode": "日间模式",
+    "darkMode": "夜间模式",
+    "content": "日志目录",
+    "onContent": "日志目录"
   }
 }

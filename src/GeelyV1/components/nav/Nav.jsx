@@ -16,10 +16,6 @@ function Nav(props) {
   const country = queryParams.get('country');
   const variant = queryParams.get('variant');
 
-  const handleClick = () => {
-    navigate("/courses");
-  }
-
   const handleLogoClick = () => {
     navigate({pathname: "/" + location.pathname.slice(1).split("/")[0], search: location.search});
   }
@@ -37,13 +33,17 @@ function Nav(props) {
           </div>
           <div className={style.nav_details}>
             <button onClick={() => themeToggle.toggleTheme()}>
+             {/* <img
+                alt='cart-icon'
+                src='https://cdn-icons-png.flaticon.com/512/4903/4903482.png'
+                className={`${style.cart_icon} ${style.icon} `}
+              />*/}
               {themeToggle.theme === 'dark-theme' ? t(`${language}.lightMode`) : t(`${language}.darkMode`)}
             </button>
-            <button>
               <NavLink to={{pathname: 'content', search: location.search}}> 
-                {({isActive}) => (isActive? t(`${language}.onContent`) : t(`${language}.content`))}
+                {({isActive}) => (isActive ? <button>{t(`${language}.onContent`)}</button> 
+                  : <button>{t(`${language}.content`)}</button>)}
               </NavLink>
-            </button>
           </div>
         </div>
       </nav>
@@ -53,8 +53,3 @@ function Nav(props) {
 }
 
 export default Nav;
-//  <img
-//    alt='cart-icon'
-//    src='https://cdn-icons-png.flaticon.com/512/4903/4903482.png'
-//    className={`${style.cart_icon} ${style.icon} `}
-//  />;

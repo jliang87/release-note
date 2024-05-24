@@ -12,17 +12,18 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1;
+    flex: 1.2;
     background-color: var(--clr-bg);
     margin: 0px;
     clip-path: polygon(0 0, 100% 0, 71% 100%, 0 100%);
 }
 
 .logo {
-    width: 25rem;
-    aspect-ratio: 1/1;
-    margin-right: 2vw;
-    animation: attack 4s ease-in-out alternate infinite;
+    width: 260% !important;
+    object-fit: cover;
+/*    aspect-ratio: 1/1;*/
+/*    margin-right: 2vw;*/
+/*    animation: attack 4s ease-in-out alternate infinite;*/
 }
 
 .content {
@@ -91,10 +92,6 @@ header {
         font-size: 1.2rem;
     }
 }
-
-
-
-
 
 @keyframes attack {
     0% {

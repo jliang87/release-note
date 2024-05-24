@@ -31,7 +31,8 @@ nav {
 
 .logo {
     width: 8rem;
-    aspect-ratio: 1/1;
+/*    aspect-ratio: 1/1;*/
+    cursor: pointer;
     margin-right: 2vw;
 }
 
@@ -47,7 +48,7 @@ nav {
 .nav_details button {
     width: max-content;
     cursor: pointer;
-    margin: 1rem;
+    margin: 0.7rem;
     padding: 0.3rem 0.5rem;
     font-size: 1rem;
     font-weight: 900;
