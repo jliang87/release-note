@@ -3,7 +3,7 @@ import styles from "./Chapter.module.css";
 import style from "../item/Item.module.css";
 import { useParams,  useOutletContext, Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
-import { useRouteInfo } from '../../../../../providers/routeInfo';
+import { useRouteInfo } from '../../../../providers/routeInfo';
 
 function Chapter() {
   const { t, i18n } = useTranslation();

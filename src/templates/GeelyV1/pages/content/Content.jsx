@@ -1,10 +1,10 @@
 import React from 'react';
 import style from './Content.module.css';
-import Card from '../../../components/card';
+import Card from '../../components/card';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useRouteInfo } from '../../../../../providers/routeInfo';
-import useJsonData from '../../../../../hooks/useJsonData';
+import { useRouteInfo } from '../../../../providers/routeInfo';
+import useJsonData from '../../../../hooks/useJsonData';
 import { useLocation } from 'react-router-dom';
  
 function Content(props) {

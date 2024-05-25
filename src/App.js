@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import {BrowserRouter as browserRouter, RouterProvider, createBrowserRouter} from 'react-router-dom';
 
 import BlankTemplate from "./templates/BlankTemplate/BlankTemplate";
-import Hero from "./templates/GeelyV1/pages/app/hero/Hero";
+import Hero from "./templates/GeelyV1/pages/hero/Hero";
 import Nav from "./templates/GeelyV1/components/nav/Nav";
-import Content from "./templates/GeelyV1/pages/app/content/Content";
-import Item from "./templates/GeelyV1/pages/app/item/Item";
-import Chapter from "./templates/GeelyV1/pages/app/chapter/Chapter";
+import Content from "./templates/GeelyV1/pages/content/Content";
+import Item from "./templates/GeelyV1/pages/item/Item";
+import Chapter from "./templates/GeelyV1/pages/chapter/Chapter";
 
 import { ThemeProvider } from './providers/theme';
 import { RouteInfoProvider } from './providers/routeInfo';

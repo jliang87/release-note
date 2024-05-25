@@ -2,8 +2,8 @@ import React from "react";
 import style from "./Item.module.css";
 import { Link, Outlet, useParams } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
-import { useRouteInfo } from '../../../../../providers/routeInfo';
-import useJsonData from '../../../../../hooks/useJsonData';
+import { useRouteInfo } from '../../../../providers/routeInfo';
+import useJsonData from '../../../../hooks/useJsonData';
 
 function Item() {
   const { t, i18n } = useTranslation();
