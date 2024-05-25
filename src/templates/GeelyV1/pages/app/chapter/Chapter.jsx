@@ -11,7 +11,7 @@ function Chapter() {
 
   const {chapterId} = useParams();
   const item = useOutletContext();
-  const chapter = item.chapters.find((item) => item.chapter === chapterId);
+  const chapter = item.chapters.find((chapter) => chapter.chapterId === chapterId);
 
   return (
     <div className={style.items} >
@@ -25,9 +25,9 @@ function Chapter() {
           height="560"
           src={chapter.video}
           title="React Video"
-          frameborder="1"
+          frameBorder="1"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
     </div>

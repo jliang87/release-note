@@ -5,22 +5,21 @@
         "img": "https://cdn-icons-png.flaticon.com/512/4072/4072246.png",
         "chapters": [
             {
-                "chapter": "1",
+                "chapterId": "1",
                 "title": "lightshowChapter1Title",
                 "description": "lightshowChapter1Description",
                 "details": "lightshowChapter1Details",
                 "video": "//player.bilibili.com/player.html?isOutside=true&aid=624101141&bvid=BV1ab4y1N7wp&cid=1414198394&p=1" 
-                
             },
             {
-                "chapter": "2",
+                "chapterId": "2",
                 "title": "lightshowChapter2Title",
                 "description": "lightshowChapter2Description",
                 "details": "lightshowChapter2Details",
                 "video":"//player.bilibili.com/player.html?isOutside=true&aid=935417328&bvid=BV1ST4y127m6&cid=477426301&p=1"
             },
             {
-                "chapter": "3",
+                "chapterId": "3",
                 "title": "lightshowChapter3Title",
                 "description": "lightshowChapter3Description",
                 "details": "lightshowChapter3Details",
@@ -34,7 +33,7 @@
         "img": "https://cdn-icons-png.flaticon.com/512/709/709011.png",
         "chapters": [
              {
-                "chapter": "1",
+                "chapterId": "1",
                 "title": "parkingChapter1Title",
                 "description": "parkingChapter1Description",
                 "details": "parkingChapter1Details",
@@ -48,7 +47,7 @@
         "img": "https://cdn-icons-png.flaticon.com/512/1455/1455324.png",
         "chapters": [
             {
-                "chapter": "1",
+                "chapterId": "1",
                 "title": "driveModeChapter1Title",
                 "description": "driveModeChapter1Description",
                 "details": "driveModeChapter1Details",

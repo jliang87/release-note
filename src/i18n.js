@@ -17,7 +17,7 @@ i18next
       lookupQuerystring: 'vehicleType'
     },
     backend: {
-      loadPath: `/i18n/{{lng}}/{{ns}}.json`
+      loadPath: `/i18n/{{lng}}/{{ns}}/i18n.json`
     },
     interpolation: {
       escapeValue: false // React already escapes by default

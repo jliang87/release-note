@@ -11,6 +11,7 @@ const RouteInfoProvider = (props) => {
   const language = queryObject.get('language');
   const country = queryObject.get('country');
   const variant = queryObject.get('variant');
+  const vehicleType = queryObject.get('vehicleType');
   const realDisplayVersion = displayVersion.replace(/_/g, " ").replace(/-/g, ".");
   const queryString = location.search;
   const pathname = location.pathname;
@@ -18,7 +19,7 @@ const RouteInfoProvider = (props) => {
 
   return (
     <RouteInfoContext.Provider value={{ queryObject, queryString, displayVersion, 
-      language, country, variant, realDisplayVersion, pathname, i18nKey }}>
+      language, country, variant, realDisplayVersion, pathname, i18nKey, vehicleType }}>
       {props.children}
     </RouteInfoContext.Provider>
   );
