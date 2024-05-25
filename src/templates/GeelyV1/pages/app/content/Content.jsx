@@ -25,7 +25,6 @@ function Content(props) {
               <Link to={{pathname: `${content.id}/1`, search: routeInfo.queryString}}>
                 <Card
                   key={content.id}
-                  id={content.id}
                   title={t(`${routeInfo.i18nKey}.${content.title}`, {ns: routeInfo.displayVersion})}
                   img={content.img}
                 />

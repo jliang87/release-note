@@ -18,8 +18,8 @@ function Item() {
       <div className={style.chapter_box}>
         <div className={style.chapters}>
           <ul> 
-            {item.chapters.map((chapter) => {
-              return <div className={style.chapterId}><Link 
+            {item.chapters.map((chapter, index) => {
+              return <div key={index} className={style.chapterId}><Link 
                 to={{pathname: chapter.chapterId, search: routeInfo.queryString}}>
                   {t(`${routeInfo.i18nKey}.${chapter.title}`, {ns: routeInfo.displayVersion})}</Link></div>
             })}
