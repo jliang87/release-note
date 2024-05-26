@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import {BrowserRouter as browserRouter, RouterProvider, createBrowserRouter} from 'react-router-dom';
+import React from 'react';
+import { RouterProvider, createBrowserRouter} from 'react-router-dom';
 
 import BlankTemplate from "./templates/BlankTemplate/BlankTemplate";
 import Hero from "./templates/GeelyV1/pages/hero/Hero";

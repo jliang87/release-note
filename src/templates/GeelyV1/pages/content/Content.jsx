@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useRouteInfo } from '../../../../providers/routeInfo';
 import useJsonData from '../../../../hooks/useJsonData';
-import { useLocation } from 'react-router-dom';
  
 function Content(props) {
   const { t, i18n } = useTranslation();
