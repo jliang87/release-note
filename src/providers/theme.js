@@ -12,14 +12,15 @@ const ThemeProvider = (props) => {
   const location = useLocation();
 
   const toggleTheme = () => {
+    const queryParams = new URLSearchParams(location.search);
+
     if (theme === undefined){
-      window.history.pushState({}, '', '?darkMode=true');
+      window.history.pushState({}, '', `?${queryParams}&darkMode=true`);
       setTheme('dark-theme');
     } else {
       const newTheme = theme === 'light-theme' ? 'dark-theme' : 'light-theme';
       const isDark = newTheme === 'light-theme' ? 'false' : 'true';
 
-      const queryParams = new URLSearchParams(location.search);
       queryParams.delete("darkMode");
       window.history.pushState({}, '', `?${queryParams}&darkMode=${isDark}`);
       setTheme(newTheme);
