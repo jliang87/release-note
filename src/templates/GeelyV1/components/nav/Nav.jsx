@@ -18,8 +18,8 @@ function Nav(props) {
 
   return (
     <>
-      <nav>
-        <div className={style.nav_container}>
+      <nav className={style.nav_container}>
+        <div className={style.nav_inner_container}>
           <div className={style.nav_title_wrapper} onClick={handleLogoClick}>
             <img
               className={style.logo}

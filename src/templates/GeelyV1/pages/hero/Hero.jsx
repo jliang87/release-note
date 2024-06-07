@@ -11,7 +11,7 @@ function Hero() {
   useBodyClass("contrastBackground");
 
   return (
-    <header>
+    <header className={style.hero_container}>
       <section className={style.image_wrapper}>
         <img
           className={style.image}
