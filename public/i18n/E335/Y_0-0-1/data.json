@@ -1,0 +1,46 @@
+[
+    {
+        "id": "lightshow",
+        "title": "lightshowTitle",
+        "description": "lightshowDescription",  
+        "bullets": [
+            {
+                "detail": "lightshowBullet1Detail"
+            },
+            {
+                "detail": "lightshowBullet2Detail"
+            },
+            {
+                "detail": "lightshowBullet3Detail"
+            }
+        ]
+    },
+    {
+        "id": "parking",
+        "title": "parkingTitle",
+        "description": "parkingDescription",  
+        "bullets": [
+            {
+                "detail": "parkingBullet1Detail",
+                "imgs": [
+                    "/0301pc.jpg"
+                ],
+                "videos": [
+                    "//player.bilibili.com/player.html?isOutside=true&aid=624101141&bvid=BV1ab4y1N7wp&cid=1414198394&p=1"
+                ] 
+            }
+        ]
+    },
+    {
+        "id": "driveMode",
+        "title": "driveModeTitle",
+        "description": "driveModeDescription",  
+        "bullets": [
+            {
+                "imgs": [
+                    "/0425pc.jpg"
+                ]
+            }
+        ]
+    }
+]

@@ -19,7 +19,7 @@ function Item() {
         <div className={style.chapters}>
           <ul> 
             {item.chapters.map((chapter, index) => {
-              return <div key={index} className={style.chapterId}><Link 
+              return <div key={index} className={style.chapter}><Link 
                 to={{pathname: chapter.chapterId, search: routeInfo.queryString}}>
                   {t(`${routeInfo.i18nKey}.${chapter.title}`, {ns: routeInfo.displayVersion})}</Link></div>
             })}

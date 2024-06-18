@@ -1,12 +1,17 @@
 {
   "cn.zh": {
-    "subtitle": "滚辣出炉 OTA 版本{{version}}",
-    "title": "准备享受最新驾驶体验",
-    "description": "更新包括可编辑灯光秀、自动泊车优化、新调校驾驶模式等"
-  },
-  "us.en": {
-    "subtitle": "滚辣出炉 OTA V{{version}}",
-    "title": "准备享受最新驾驶体验",
-    "description": "更新包括可编辑灯光秀、自动泊车优化、新调校驾驶模式等"
+    "title": "{{version}} 准备享受最新驾驶体验",
+    "description": "更新包括可编辑灯光秀、自动泊车优化、新调校驾驶模式等",
+    "lightshowTitle": "灯光秀平台首发布 - 车端与手机APP编译灯光和歌曲同步的完美搭配",
+    "lightshowDescription": "灯光秀平台首发布 - 车端与手机APP编译灯光和歌曲同步的完美搭配",
+    "parkingTitle": "泊车来了个新助手！- 新自动警告附近行人",
+    "parkingDescription": "泊车来了个新助手！- 新自动警告附近行人",
+    "driveModeTitle": "新「动感加速」驾驶模式 - 系好安全带！尝试3秒破百",
+    "driveModeDescription": "新「动感加速」驾驶模式 - 系好安全带！尝试3秒破百",
+    "lightshowBullet1Detail": "灯光秀首发",
+    "lightshowBullet2Detail": "灯光秀首发哇啦哇啦哇啦哇啦哇啦",
+    "lightshowBullet3Detail": "灯光秀首发哇啦哇啦哇啦哇啦哇啦哇啦灯光秀首发哇啦哇啦哇啦哇啦哇啦哇啦灯光秀首发哇啦哇啦哇啦哇啦哇啦哇啦灯光秀首发哇啦哇啦哇啦哇啦哇啦哇啦",
+    "parkingBullet1Detail": "泊车行人警告哇啦哇啦哇啦哇啦哇啦哇啦泊车行人警告哇啦哇啦哇啦哇啦哇啦哇啦泊车行人警告哇啦哇啦",
+    "driveModeBullet1Detail": "动感加速驾驶模式哇啦哇啦哇啦哇啦哇啦"
   }
 }

@@ -33,15 +33,7 @@
 /*  color: var(--clr-accent);*/
 }
 
-.items {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  width: 70vw;
-  color: var(--clr-text-main);
-}
-
-.chapterId {
+.chapter {
   font-size: 1.2rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
