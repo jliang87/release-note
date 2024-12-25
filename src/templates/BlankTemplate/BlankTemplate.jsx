@@ -4,11 +4,15 @@ import { useLocation } from "react-router-dom";
 import { useRouteInfo } from '../../providers/routeInfo';
 import style from './BlankTemplate.module.css';
 import useJsonData from '../../hooks/useJsonData';
+import useBodyClass from "../../hooks/useBodyClass";
+import "./index.css";
 
 function BlankTemplate() {
   const { t, i18n } = useTranslation();
   const routeInfo = useRouteInfo(); 
   const jsonData = useJsonData(`/i18n/${routeInfo.vehicleType}/${routeInfo.displayVersion}/data.json`);
+  useBodyClass("contrastBackground");
+  
   if (jsonData == null) return (<div />);
 
   return (

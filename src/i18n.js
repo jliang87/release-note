@@ -9,7 +9,7 @@ i18next
   .use(initReactI18next)
   .init({
     debug: true,
-    ns: ['common', '1-0-0', 'Y_0-0-1'],
+    ns: ['common', '1-0-3-2', 'Y_1-0-0'],
     defaultNs: 'common',
     detection: {
       order: ['querystring'],
@@ -17,7 +17,9 @@ i18next
       lookupQuerystring: 'vehicleType'
     },
     backend: {
-      loadPath: `/i18n/{{lng}}/{{ns}}/i18n.json`
+      loadPath: function(lng, ns) {
+        return '/i18n/' + lng[0].toUpperCase() + '/' + ns + '/i18n.json';
+      }
     },
     interpolation: {
       escapeValue: false // React already escapes by default

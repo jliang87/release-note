@@ -23,7 +23,7 @@ function App() {
         ]}
       ]},
     ]},
-    {path: "/common", element: <RouteInfoProvider><BlankTemplate /></RouteInfoProvider>},
+    {path: "/common", element: <ThemeProvider templateClass="common"><RouteInfoProvider><BlankTemplate /></RouteInfoProvider></ThemeProvider>},
   ])
 
   return (

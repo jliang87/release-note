@@ -1,14 +1,19 @@
-# Getting Started with Create React App
+# Geely Release Note开发框架
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+这为用于开发吉利OTA Release Note。 
 
-## Available Scripts
+## 框架结构
 
-In the project directory, you can run:
+Release Note开发框架模块可分为：
+1）route路径配控 
+2）Release Note内容和翻译文件 
+3）UI template模版
 
-### `npm start`
+以下对各框架模块进行讲解:
 
-Runs the app in the development mode.\
+### `route路径配控`
+
+route路径配控为当前在URL路径中通过query params（参数分别为车型、对外版本、国家、语言、夜间模式）React-i18next的配置文件Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
