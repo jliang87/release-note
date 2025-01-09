@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: 'Flyme';
-  src: url('FlymeSansVF-VF.ttf') format('truetype');
+  src: url('FlymeSans-VF.ttf') format('truetype');
   /* Add additional font formats if necessary */
   /* Specify the correct path to the font files */
 }
@@ -43,7 +43,11 @@
   color: var(--clr-text-main);
 }
 
-.common code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.common h1,
+.common h2,
+.common h3,
+.common h4,
+.common h5,
+.common h6 {
+  margin-bottom: 0.3rem;
 }
