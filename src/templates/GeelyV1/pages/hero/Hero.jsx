@@ -8,7 +8,7 @@ function Hero() {
   const { t, i18n } = useTranslation();
   const routeInfo = useRouteInfo(); 
 
-  useBodyClass("contrastBackground");
+  useBodyClass("themeEnablingClass");
 
   return (
     <header className={style.hero_container}>

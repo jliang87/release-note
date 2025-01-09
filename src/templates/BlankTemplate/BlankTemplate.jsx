@@ -11,7 +11,7 @@ function BlankTemplate() {
   const { t, i18n } = useTranslation();
   const routeInfo = useRouteInfo(); 
   const jsonData = useJsonData(`/i18n/${routeInfo.vehicleType}/${routeInfo.displayVersion}/data.json`);
-  useBodyClass("contrastBackground");
+  useBodyClass("themeEnablingClass");
   
   if (jsonData == null) return (<div />);
 
